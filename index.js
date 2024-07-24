@@ -26,7 +26,7 @@ bot.onText(/\/start/, async (msg, match) => {
           [
             {
               text: "Play Jumping Game",
-              url: `https://boris-jumping.onrender.com?chatId=${chatId}`,
+              url: `https://donkeyhop.onrender.com?chatId=${chatId}`,
             },
           ],
         ],
