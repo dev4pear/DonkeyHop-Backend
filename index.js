@@ -1,5 +1,7 @@
 process.env["NTBA_FIX_350"] = 1;
 const TelegramBot = require("node-telegram-bot-api");
+const express = require("express");
+const app = express();
 
 const axios = require("axios");
 require("dotenv").config();
@@ -40,4 +42,12 @@ bot.onText(/\/sendMessage/, async (msg, match) => {
 // Handle errors
 bot.on("polling_error", (error) => {
   console.log(error);
+});
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(4000, () => {
+  console.log(`Example app listening on port 4000`);
 });
